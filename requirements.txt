@@ -1,0 +1,8 @@
+langchain
+langchain-huggingface
+faiss-cpu
+langchain-core
+tqdm
+langchain-community
+langchain-ollama
+psycopg2

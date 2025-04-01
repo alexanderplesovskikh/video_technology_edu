@@ -1,0 +1,60 @@
+model start loading
+model end loading
+file_path:  /home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/1.txt
+first line:  # Терминология
+file_path:  /home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/2.txt
+first line:  # Технология балансировки и доступа к медиаконтенту через CDN
+file_path:  /home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/3.txt
+first line:  # NAS
+file_path:  /home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/4.txt
+first line:  # IPTV
+file_path:  /home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/5.txt
+first line:  # VoIP
+['Терминология', 'Технология балансировки и доступа к медиаконтенту через CDN', 'NAS', 'IPTV', 'VoIP']
+dict_keys(['/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/1.txt', '/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/2.txt', '/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/3.txt', '/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/4.txt', '/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/course_materials/5.txt'])
+The folder '/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/faiss' exists.
+Running Videoedu Bot (from source):
+None
+INFO:root:starting message handling...
+INFO:root:waiting for next message
+INFO:root:waiting for next message
+INFO:root:waiting for next message
+INFO:root:waiting for next message
+INFO:root:waiting for next message
+INFO:httpx:HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 404 Not Found"
+Traceback (most recent call last):
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/bin/zulip-run-bot", line 33, in <module>
+    sys.exit(load_entry_point('zulip-bots', 'console_scripts', 'zulip-run-bot')())
+  File "/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/run.py", line 176, in main
+    run_message_handler_for_bot(
+  File "/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/lib.py", line 513, in run_message_handler_for_bot
+    client.call_on_each_event(event_callback, ["message"])
+  File "/home/oleg/education/python-zulip-api/zulip/zulip/__init__.py", line 808, in call_on_each_event
+    callback(event)
+  File "/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/lib.py", line 511, in event_callback
+    handle_message(event["message"], event["flags"])
+  File "/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/lib.py", line 503, in handle_message
+    message_handler.handle_message(message=message, bot_handler=restricted_client)
+  File "/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/videoedu.py", line 299, in handle_message
+    llm_summary = format_llm_prompt(summary_prompt)
+  File "/home/oleg/education/python-zulip-api/zulip_bots/zulip_bots/bots/videoedu/videoedu.py", line 232, in format_llm_prompt
+    response = init_ollama.invoke(query)
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 390, in invoke
+    self.generate_prompt(
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 759, in generate_prompt
+    return self.generate(prompt_strings, stop=stop, callbacks=callbacks, **kwargs)
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 962, in generate
+    output = self._generate_helper(
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 796, in _generate_helper
+    raise e
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_core/language_models/llms.py", line 783, in _generate_helper
+    self._generate(
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_ollama/llms.py", line 288, in _generate
+    final_chunk = self._stream_with_aggregation(
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_ollama/llms.py", line 256, in _stream_with_aggregation
+    for stream_resp in self._create_generate_stream(prompt, stop, **kwargs):
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/langchain_ollama/llms.py", line 211, in _create_generate_stream
+    yield from self._client.generate(
+  File "/home/oleg/education/python-zulip-api/zulip-api-py3-venv/lib/python3.10/site-packages/ollama/_client.py", line 168, in inner
+    raise ResponseError(e.response.text, e.response.status_code) from None
+ollama._types.ResponseError: model 'owl/t-lite:latest' not found (status code: 404)
