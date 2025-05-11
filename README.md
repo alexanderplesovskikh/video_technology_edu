@@ -2,6 +2,8 @@
 
 Бот-обучатор. В ранней стадии.
 
+![Educator SVT hero image](https://github.com/alexanderplesovskikh/video_technology_edu/blob/master/video_edu.png)
+
 ## Запуск модели ollama
 
 1. Скачать ollama по ссылке: https://ollama.com/download/
