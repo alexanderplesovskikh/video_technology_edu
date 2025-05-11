@@ -1,4 +1,4 @@
-# Educator bot (SVT)
+# Educator bot (SVT) 🤖📸
 
 Бот-обучатор. В ранней стадии.
 
